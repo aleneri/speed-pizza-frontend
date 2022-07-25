@@ -1,9 +1,22 @@
-import styles from '../../styles/Home.module.scss';
+import Head from "next/head"
+import Image from "next/image"
+import logoImg from '../../public/logo.png'
+import styles from  "../../styles/home.module.scss";
+import { Input } from "../components/ui/Input";
 
 export default function Home() {
   return (
-    <div className={styles.container}>
-      <h1>Speed Pizza 2 :)</h1>
-    </div>
+    <>
+      <Head>
+        <title>Speed Pizza - Faça seu login</title>
+      </Head>
+
+      <div className={styles.containerCenter}>
+        <Image src={logoImg} alt="Logo Speed Pizza"></Image>
+        <div className={styles.login}>
+          <Input/>
+        </div>
+      </div>
+    </>
   )
 }
